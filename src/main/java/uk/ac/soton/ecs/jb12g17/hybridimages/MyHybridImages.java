@@ -38,8 +38,8 @@ public class MyHybridImages {
         low_pass = low_pass.padding(-templateLowPass[0].length, -templateLowPass.length);
         high_pass = high_pass.padding(-templateHighPass[0].length, -templateHighPass.length);
 
-        DisplayUtilities.display(low_pass);
-        DisplayUtilities.display(high_pass.add((float) 0.5));
+        //DisplayUtilities.display(low_pass);
+        //DisplayUtilities.display(high_pass.add((float) 0.5));
 
 
         return low_pass.add(high_pass);
