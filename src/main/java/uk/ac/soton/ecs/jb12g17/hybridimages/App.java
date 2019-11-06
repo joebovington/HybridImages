@@ -5,6 +5,7 @@ import org.openimaj.image.DisplayUtilities;
 import org.openimaj.image.ImageUtilities;
 import org.openimaj.image.MBFImage;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -17,5 +18,8 @@ public class App {
                 new VFSListDataset<>("zip:http://comp3204.ecs.soton.ac.uk/cw/hybrid-images.zip", ImageUtilities.MBFIMAGE_READER);
         MyHybridImages hybridImages = new MyHybridImages();
         DisplayUtilities.display(hybridImages.makeHybrid(images.getInstance(6), (float) 5, images.getInstance(3), (float) 5));
+        //MBFImage image1 = ImageUtilities.readMBF(new File("C:\\Users\\Joseph\\Pictures\\compvis\\shrek2.png"));
+        //MBFImage image2 = ImageUtilities.readMBF(new File("C:\\Users\\Joseph\\Pictures\\compvis\\fiona2.png"));
+        //DisplayUtilities.display(hybridImages.makeHybrid(image1,(float) 4, image2, (float) 3));
     }
 }

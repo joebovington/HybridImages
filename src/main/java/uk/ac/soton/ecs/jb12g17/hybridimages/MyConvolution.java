@@ -6,11 +6,18 @@ import org.openimaj.image.processor.SinglebandImageProcessor;
 public class MyConvolution implements SinglebandImageProcessor<Float, FImage> {
     private float[][] kernel;
 
+    /**
+     * @param kernel the kernel which the convolution is performed with
+     */
     public MyConvolution(float[][] kernel) {
 
         this.kernel = kernel;
     }
 
+    /**
+     * @param image the image to process
+     * method uses 4 for loops to iterate over each pixel of the image and the kernel to perform the convolution
+     */
     @Override
     public void processImage(FImage image) {
         int kernelCol = kernel.length;
